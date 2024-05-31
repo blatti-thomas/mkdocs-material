@@ -1,6 +1,6 @@
 # Homepage
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+
 
 
  
@@ -13,7 +13,6 @@ Ce fichier est conçu comme un outil de prise de notes
  gestion de notes, cet outil vise à améliorer l'efficacité
  de l'apprentissage et la révision.***
  
-
 
 
 # Bibliothèques Standard du C 
