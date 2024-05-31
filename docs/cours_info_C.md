@@ -119,7 +119,7 @@ long double j; --> Approximation de réels sur min. 80 bits, mais souvent
   * %p          : adresse  
   * %%          : le caractère % lui-même  
 ```
-# === Flags ===
+## === Flags ===
 ```
 - (flag)    : alignement à gauche
 + (flag)    : nombres imprimés avec le signe (sinon seul le signe négatif est imprimé)
