@@ -1,0 +1,31 @@
+/* Styles pour couper les noms dans la table des matières */
+.md-nav__link {
+    white-space: nowrap;
+    /* Garde le texte sur une seule ligne */
+    overflow: hidden;
+    /* Cache le texte qui déborde du conteneur */
+    text-overflow: ellipsis;
+    /* Affiche des points de suspension à la fin */
+    max-width: 100%;
+
+    /* Définit une largeur maximale pour les liens, ajustez selon vos besoins */
+    /* Indentation pour les liens de niveau 1 */
+    .md-nav__link--level-1 {
+        padding-left: 8px;
+        /* Indentation de base */
+    }
+
+    /* Indentation pour les liens de niveau 2 */
+    .md-nav__link--level-2 {
+        padding-left: 16px;
+        /* Double de l'indentation de base */
+    }
+
+    /* Indentation pour les liens de niveau 3 */
+    .md-nav__link--level-3 {
+        padding-left: 24px;
+        /* Triple de l'indentation de base */
+    }
+
+    /* Ajoutez plus de styles si vous avez plus de niveaux de titres */
+}
