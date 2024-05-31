@@ -49,7 +49,7 @@
 #include <signal.h> --> Gestion des signaux 
 ```
 
-## === Entrées/Sorties et Manipulation de Chaînes ===
+## === Entrées/Sorties et Manipulation  de Chaînes ===
 ```
 #include <stdio.h> --> Entrée/Sortie  
 ```
