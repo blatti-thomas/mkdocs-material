@@ -1,4 +1,4 @@
-# Page d'accueil
+
 > Thomas Blatti (Thomas.Blatti@heig-vd.ch)  
 >
 >Ce site est conçu comme un outil de stockage de prise de notes
@@ -8,6 +8,6 @@
  gestion de notes, cet outil vise à améliorer l'efficacité
  de l'apprentissage et la révision.
 ## Sommaires :
-[Prise de notes language C](cours_info_C.md)
-
+[Prise de notes language C](cours_info_C.md)    
+[Prise de notes language Python](cours_info_python.md)
 
