@@ -44,7 +44,9 @@ markdown_extensions:
   - toc:
       permalink: true
       baselevel: 3
-  
+
+markdown_extensions:
+  - mdx_math
 
 extra_css:
   - css/custom.css 
