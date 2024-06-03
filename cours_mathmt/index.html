@@ -706,51 +706,55 @@
 <p>Voici un document complet qui intègre des exemples détaillés de résolution pour chacun des thèmes mentionnés dans votre test de mathématiques :</p>
 <h5 id="1-methode-de-gauss-pour-les-systemes-lineaires">1. Méthode de Gauss pour les Systèmes Linéaires<a class="headerlink" href="#1-methode-de-gauss-pour-les-systemes-lineaires" title="Permanent link">&para;</a></h5>
 <p><strong>Exemple</strong>: Résoudre le système suivant en utilisant la méthode de Gauss.
-[
-\begin{align<em>}
-2x + 3y - z &amp;= 5 \
-4x + 6y - 3z &amp;= 9 \
--2x - 3y + 3z &amp;= -1
-\end{align</em>}
-]</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+2x + 3y - z &= 5 \\
+4x + 6y - 3z &= 9 \\
+-2x - 3y + 3z &= -1
+\end{align*}
+</script>
+</p>
 <h6 id="resolution">Résolution:<a class="headerlink" href="#resolution" title="Permanent link">&para;</a></h6>
 <ol>
 <li><strong>Forme matricielle et opérations élémentaires</strong> pour obtenir une forme échelonnée:
-   [
+   <script type="math/tex; mode=display">
    \begin{pmatrix}
-   2 &amp; 3 &amp; -1 &amp; | &amp; 5 \
-   4 &amp; 6 &amp; -3 &amp; | &amp; 9 \
-   -2 &amp; -3 &amp; 3 &amp; | &amp; -1
+   2 & 3 & -1 & | & 5 \\
+   4 & 6 & -3 & | & 9 \\
+   -2 & -3 & 3 & | & -1
    \end{pmatrix}
-   ]</li>
+   </script>
+</li>
 <li>Diviser la première ligne par 2.</li>
 <li>Soustraire le double de la première ligne de la deuxième ligne et ajouter la première ligne à la troisième ligne.</li>
 <li>
 <p>Réduire la troisième ligne pour obtenir un pivot.</p>
 </li>
 <li>
-<p>La forme échelonnée réduite permet de trouver que <span class="arithmatex"><span class="MathJax_Preview"> z = 2 </span><script type="math/tex"> z = 2 </script></span>, puis remonter pour trouver <span class="arithmatex"><span class="MathJax_Preview"> y </span><script type="math/tex"> y </script></span> et <span class="arithmatex"><span class="MathJax_Preview"> x </span><script type="math/tex"> x </script></span>.</p>
+<p>La forme échelonnée réduite permet de trouver que <script type="math/tex"> z = 2 </script>, puis remonter pour trouver <script type="math/tex"> y </script> et <script type="math/tex"> x </script>.</p>
 </li>
 </ol>
 <h5 id="2-systeme-singulier">2. Système Singulier<a class="headerlink" href="#2-systeme-singulier" title="Permanent link">&para;</a></h5>
 <p><strong>Exemple</strong>: Vérifier si le système suivant est singulier et pourquoi.
-[
-\begin{align<em>}
-x + 2y - z &amp;= 0 \
-2x + 4y - 2z &amp;= 0 \
-3x + 6y - 3z &amp;= 0
-\end{align</em>}
-]</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+x + 2y - z &= 0 \\
+2x + 4y - 2z &= 0 \\
+3x + 6y - 3z &= 0
+\end{align*}
+</script>
+</p>
 <h6 id="resolution_1">Résolution:<a class="headerlink" href="#resolution_1" title="Permanent link">&para;</a></h6>
 <ol>
 <li><strong>Forme matricielle</strong>:
-   [
+   <script type="math/tex; mode=display">
    \begin{pmatrix}
-   1 &amp; 2 &amp; -1 \
-   2 &amp; 4 &amp; -2 \
-   3 &amp; 6 &amp; -3
+   1 & 2 & -1 \\
+   2 & 4 & -2 \\
+   3 & 6 & -3
    \end{pmatrix}
-   ]</li>
+   </script>
+</li>
 <li><strong>Échelonnage</strong>:</li>
 <li>
 <p>Les lignes sont proportionnelles, indiquant une matrice de rang 1.</p>
@@ -762,28 +766,30 @@ x + 2y - z &amp;= 0 \
 </ol>
 <h5 id="3-methode-de-cramer">3. Méthode de Cramer<a class="headerlink" href="#3-methode-de-cramer" title="Permanent link">&para;</a></h5>
 <p><strong>Exemple</strong>: Résoudre le système suivant en utilisant la méthode de Cramer, si possible.
-[
-\begin{align<em>}
-x + y + z &amp;= 6 \
-2x + 3y + z &amp;= 11 \
-3x + 3y + 2z &amp;= 14
-\end{align</em>}
-]</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+x + y + z &= 6 \\
+2x + 3y + z &= 11 \\
+3x + 3y + 2z &= 14
+\end{align*}
+</script>
+</p>
 <h6 id="resolution_2">Résolution:<a class="headerlink" href="#resolution_2" title="Permanent link">&para;</a></h6>
 <ol>
-<li><strong>Matrice des coefficients</strong> <span class="arithmatex"><span class="MathJax_Preview"> A </span><script type="math/tex"> A </script></span> et déterminant <span class="arithmatex"><span class="MathJax_Preview"> \text{det}(A) </span><script type="math/tex"> \text{det}(A) </script></span>:
-   [
+<li><strong>Matrice des coefficients</strong> <script type="math/tex"> A </script> et déterminant <script type="math/tex"> \text{det}(A) </script>:
+   <script type="math/tex; mode=display">
    A = \begin{pmatrix}
-   1 &amp; 1 &amp; 1 \
-   2 &amp; 3 &amp; 1 \
-   3 &amp; 3 &amp; 2
+   1 & 1 & 1 \\
+   2 & 3 & 1 \\
+   3 & 3 & 2
    \end{pmatrix}
-   ]</li>
-<li>
-<p>Calculons <span class="arithmatex"><span class="MathJax_Preview"> \text{det}(A) </span><script type="math/tex"> \text{det}(A) </script></span>.</p>
+   </script>
 </li>
 <li>
-<p><strong>Déterminants pour <span class="arithmatex"><span class="MathJax_Preview"> x, y, z </span><script type="math/tex"> x, y, z </script></span></strong>:</p>
+<p>Calculons <script type="math/tex"> \text{det}(A) </script>.</p>
+</li>
+<li>
+<p><strong>Déterminants pour <script type="math/tex"> x, y, z </script></strong>:</p>
 </li>
 <li>
 <p>Remplaçons les colonnes respectives par le vecteur des termes constants et calculons les déterminants.</p>
@@ -791,18 +797,22 @@ x + y + z &amp;= 6 \
 <li>
 <p><strong>Application de la méthode de Cramer</strong>:</p>
 </li>
-<li><span class="arithmatex"><span class="MathJax_Preview"> x = \frac{\text{det}(A_x)}{\text{det}(A)} </span><script type="math/tex"> x = \frac{\text{det}(A_x)}{\text{det}(A)} </script></span>, et de même pour <span class="arithmatex"><span class="MathJax_Preview"> y </span><script type="math/tex"> y </script></span> et <span class="arithmatex"><span class="MathJax_Preview"> z </span><script type="math/tex"> z </script></span>.</li>
+<li>
+<script type="math/tex"> x = \frac{\text{det}(A_x)}{\text{det}(A)} </script>, et de même pour <script type="math/tex"> y </script> et <script type="math/tex"> z </script>.</li>
 </ol>
 <h5 id="4-developpement-limite-dordre-n-pour-taylor">4. Développement Limité d'ordre n pour Taylor<a class="headerlink" href="#4-developpement-limite-dordre-n-pour-taylor" title="Permanent link">&para;</a></h5>
-<p><strong>Exemple</strong>: Développement limité de la fonction <span class="arithmatex"><span class="MathJax_Preview"> \sin(x) </span><script type="math/tex"> \sin(x) </script></span> autour de <span class="arithmatex"><span class="MathJax_Preview"> x = 0 </span><script type="math/tex"> x = 0 </script></span> jusqu'à l'ordre 5.</p>
+<p><strong>Exemple</strong>: Développement limité de la fonction <script type="math/tex"> \sin(x) </script> autour de <script type="math/tex"> x = 0 </script> jusqu'à l'ordre 5.</p>
 <h6 id="resolution_3">Résolution:<a class="headerlink" href="#resolution_3" title="Permanent link">&para;</a></h6>
 <ol>
 <li><strong>Calcul des dérivées nécessaires</strong>:
-   [
+   <script type="math/tex; mode=display">
    \sin(x), \quad \cos(x), \quad -\sin(x), \quad -\cos(x), \quad \sin(x)
-   ]</li>
-<li><strong>Évaluation à <span class="arithmatex"><span class="MathJax_Preview"> x = 0 </span><script type="math/tex"> x = 0 </script></span></strong>:</li>
-<li><span class="arithmatex"><span class="MathJax_Preview"> \sin(0) = 0, \quad \cos(0) = 1, \quad -\sin(0) = 0, \quad -\cos(0) = -1 </span><script type="math/tex"> \sin(0) = 0, \quad \cos(0) = 1, \quad -\sin(0) = 0, \quad -\cos(0) = -1 </script></span></li>
+   </script>
+</li>
+<li><strong>Évaluation à <script type="math/tex"> x = 0 </script></strong>:</li>
+<li>
+<script type="math/tex"> \sin(0) = 0, \quad \cos(0) = 1, \quad -\sin(0) = 0, \quad -\cos(0) = -1 </script>
+</li>
 <li><strong>Développement</strong>:
    [
    \sin(x) \approx x - \frac{x^3}{6} +</li>
@@ -810,13 +820,18 @@ x + y + z &amp;= 6 \
 <p>\frac{x^5}{120}
    ]</p>
 <h5 id="5-courbes-donner-lequation-cartesienne-dune-courbe-a-partir-dun-vecteur">5. Courbes: Donner l'Équation Cartésienne d'une Courbe à partir d'un Vecteur<a class="headerlink" href="#5-courbes-donner-lequation-cartesienne-dune-courbe-a-partir-dun-vecteur" title="Permanent link">&para;</a></h5>
-<p><strong>Exemple</strong>: Trouver l'équation cartésienne de la courbe représentée par le vecteur position <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{r}(t) = \begin{pmatrix} t \\ t^2 \end{pmatrix} </span><script type="math/tex"> \mathbf{r}(t) = \begin{pmatrix} t \\ t^2 \end{pmatrix} </script></span>.</p>
+<p><strong>Exemple</strong>: Trouver l'équation cartésienne de la courbe représentée par le vecteur position <script type="math/tex"> \mathbf{r}(t) = <script type="math/tex; mode=display">\begin{pmatrix} t \\ t^2 \end{pmatrix}</script>
+</script>.</p>
 <h6 id="resolution_4">Résolution:<a class="headerlink" href="#resolution_4" title="Permanent link">&para;</a></h6>
 <ol>
 <li><strong>Paramétrisation</strong>:</li>
-<li><span class="arithmatex"><span class="MathJax_Preview"> x = t </span><script type="math/tex"> x = t </script></span>, <span class="arithmatex"><span class="MathJax_Preview"> y = t^2 </span><script type="math/tex"> y = t^2 </script></span></li>
-<li><strong>Élimination de <span class="arithmatex"><span class="MathJax_Preview"> t </span><script type="math/tex"> t </script></span></strong>:</li>
-<li><span class="arithmatex"><span class="MathJax_Preview"> y = x^2 </span><script type="math/tex"> y = x^2 </script></span></li>
+<li>
+<script type="math/tex"> x = t </script>, <script type="math/tex"> y = t^2 </script>
+</li>
+<li><strong>Élimination de <script type="math/tex"> t </script></strong>:</li>
+<li>
+<script type="math/tex"> y = x^2 </script>
+</li>
 </ol>
 
 
