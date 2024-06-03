@@ -34,12 +34,17 @@ nav:
   - Page d'accueil: index.md
   - Prise de notes en C: cours_info_C.md
   - Prise de notes en Python: cours_info_python.md
+  - Prise de notes Math MT: cours_mathmt.md
 
-
+plugins:
+  - search
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 markdown_extensions:
   - toc:
       permalink: true
       baselevel: 3
+  - mdx_math
 
 extra_css:
   - css/custom.css 

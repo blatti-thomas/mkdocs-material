@@ -9,5 +9,5 @@
  de l'apprentissage et la révision.
 ## Sommaires :
 [Prise de notes language C](cours_info_C.md)    
-[Prise de notes language Python](cours_info_python.md)
-
+[Prise de notes language Python](cours_info_python.md)  
+[Prise de notes Math MT](cours_mathmt.md)
