@@ -40,13 +40,17 @@ plugins:
   - search
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  
 markdown_extensions:
   - toc:
       permalink: true
       baselevel: 3
+  - mdx_math:
+      enable_dollar_delimiter: true
 
-markdown_extensions:
-  - mdx_math
+      
+
 
 extra_css:
-  - css/custom.css 
+  - css/custom.css
+  
