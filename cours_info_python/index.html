@@ -1,0 +1,899 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../cours_info_C/">
+      
+      
+        <link rel="next" href="../cours_mathmt/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Prise de notes en Python - Prise de notes Thomas Blatti</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="light-gray">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#affichage-en-python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Prise de notes Thomas Blatti" class="md-header__button md-logo" aria-label="Prise de notes Thomas Blatti" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Prise de notes Thomas Blatti
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prise de notes en Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="light-gray"  aria-label="Switch to Dark Mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to Dark Mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="light-gray"  aria-label="Switch to Light Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Page d'accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cours_info_C/" class="md-tabs__link">
+        
+  
+    
+  
+  Prise de notes en C
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Prise de notes en Python
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cours_mathmt/" class="md-tabs__link">
+        
+  
+    
+  
+  Prise de notes Math MT
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Prise de notes Thomas Blatti" class="md-nav__button md-logo" aria-label="Prise de notes Thomas Blatti" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Prise de notes Thomas Blatti
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Page d'accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours_info_C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prise de notes en C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Prise de notes en Python
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Prise de notes en Python
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#affichage-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Affichage en python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chaine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chaîne
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictionnaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dictionnaires
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ensembles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ensembles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours_mathmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prise de notes Math MT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#affichage-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Affichage en python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chaine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chaîne
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictionnaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dictionnaires
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ensembles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ensembles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Prise de notes en Python</h1>
+
+<h3 id="affichage-en-python">Affichage en python<a class="headerlink" href="#affichage-en-python" title="Permanent link">&para;</a></h3>
+<p>Pour afficher une valeur, on utilise la fonction print(). Cette fonction peut prendre plusieurs
+paramètres, séparés par des virgules. Elle affiche les valeurs séparées par un espace et ajoute un
+retour à la ligne à la fin.</p>
+<pre><code>print(&quot;Hello&quot;, &quot;World&quot;)
+</code></pre>
+<p>Pour afficher la valeur d’une variable, nous allons utiliser le formatage f-string. Il suffit de préfixer
+la chaîne de caractères avec la lettre f et d’entourer le nom de la variable avec des accolades {}.</p>
+<pre><code>name = &quot;World&quot;
+print(f&quot;Hello {name}&quot;)
+</code></pre>
+<p>Pour afficher un nombre à virgule flottante avec un nombre de décimales limité, on peut utiliser la
+notation suivante: {variable:.xf} où x est le nombre de décimales souhaité.</p>
+<pre><code>pi = 3.141592653589793
+print(f&quot;Pi: {pi:.2f}&quot;)
+</code></pre>
+<p>La fonction print permet également d’afficher des listes, des tuples, des ensembles et
+des dictionnaires.</p>
+<h3 id="chaine">Chaîne<a class="headerlink" href="#chaine" title="Permanent link">&para;</a></h3>
+<p>Par rapport au C, les chaînes de caractères sont des objets à part entière en Python. Elles possèdent
+de nombreuses méthodes qui permettent de les manipuler. link</p>
+<pre><code>s = &quot;Hello World&quot;
+print(s)        #affiche la string (s)
+
+print(len(s))   # Affiche la longueur de la chaîne de caractères
+
+print(s.upper())  #affiche la longueur de la string(s) (nombre de caractere)
+
+s1 = &quot;Hello&quot;
+s2 = &quot;World&quot;
+
+full = s1 + &quot; &quot; + s2    #ajout de deux string pour en donner une seule (Hello + World)
+print(full)             #affiche la string full
+</code></pre>
+<h3 id="dictionnaires">Dictionnaires<a class="headerlink" href="#dictionnaires" title="Permanent link">&para;</a></h3>
+<p>Un dictionnaire est une collection d’objets non ordonnés, modifiables et indexés. Les dictionnaires
+sont déclarés en utilisant des accolades {} et les éléments sont séparés par des virgules ,. Chaque
+élément est constitué d’une clé et d’une valeur séparées par deux points :. Les clés doivent être#uniques et immuables (chaînes, nombres ou tuples).</p>
+<p>Les méthodes suivantes sont disponibles pour les dictionnaires: </p>
+<pre><code>clear(): supprime tous les éléments du dictionnaire
+
+copy(): renvoie une copie du dictionnaire
+
+get(): renvoie la valeur de la clé spécifiée
+
+items(): renvoie une liste contenant une paire de tuples pour chaque paire clé-valeur
+
+keys(): renvoie une liste contenant les clés du dictionnaire
+
+pop(): supprime l’élément avec la clé spécifiée
+
+popitem(): supprime le dernier élément inséré
+
+update(): met à jour le dictionnaire avec les paires clé-valeur spécifiées
+
+values(): renvoie une liste de toutes les valeurs du dictionnaire
+
+french = {&quot;un&quot;: &quot;one&quot;, &quot;deux&quot;: &quot;two&quot;, &quot;trois&quot;: &quot;three&quot;}
+
+key = {1: &quot;one&quot;, 2: &quot;two&quot;, 3: &quot;three&quot;}
+</code></pre>
+<h3 id="ensembles">Ensembles<a class="headerlink" href="#ensembles" title="Permanent link">&para;</a></h3>
+<p>Un ensemble est une collection d’objets non ordonnés et non indexés. Les ensembles sont déclarés
+en utilisant des accolades {} et les éléments sont séparés par des virgules ,.
+Les ensembles sont utilisés lorsque l’ordre des éléments n’a pas d’importance et que chaque élément
+doit être unique. Les ensembles sont plus performants que les listes pour tester l’appartenance d’un
+élément.
+Il n’est pas possible d’accéder à un élément d’un ensemble par son index.</p>
+<p>Les méthodes suivantes sont disponibles pour les ensembles: link</p>
+<pre><code>add(): ajoute un élément à l’ensemble
+
+clear(): supprime tous les éléments de l’ensemble
+
+copy(): renvoie une copie de l’ensemble
+
+update(): ajoute plusieurs éléments à l’ensemble
+
+pop(): supprime un élément de l’ensemble
+
+remove(): Supprime un élément spécifique de l’ensemble
+
+numbers = {1, 2, 3, 4, 5}
+</code></pre>
+<h3 id="listes">Listes<a class="headerlink" href="#listes" title="Permanent link">&para;</a></h3>
+<p>Une liste est une collection d’objets ordonnés et modifiables. Les listes sont déclarées en utilisant
+des crochets [] et les éléments sont séparés par des virgules ,. Une liste en python est polymorphe,
+c’est-à-dire qu’elle peut contenir des éléments de différents types.</p>
+<p>Une liste de méthodes utiles :</p>
+<pre><code>append(): ajoute un élément à la fin de la liste
+
+insert(): insère un élément à une position donnée
+
+remove(): supprime un élément de la liste
+
+pop(): supprime un élément à une position donnée
+
+clear(): supprime tous les éléments de la liste
+
+index(): renvoie la position d’un élément
+
+count(): renvoie le nombre d’éléments ayant une valeur donnée
+
+sort(): trie les éléments de la liste
+
+reverse(): inverse l’ordre des éléments de la liste
+
+copy(): renvoie une copie de la liste
+
+
+numbers = [1, 2, 3, 4, 5]
+val = numbers[0] # val = 1
+## Attention, accès au dernier élément
+last = numbers[-1] # last = 5
+poly = [1, 2.5, &quot;Hello&quot;, True]
+numbers.append(6) # numbers = [1, 2, 3, 4, 5, 6]
+print(numbers)
+</code></pre>
+<h3 id="slices">Slices<a class="headerlink" href="#slices" title="Permanent link">&para;</a></h3>
+<p>Les slices permettent d’extraire une partie d’une liste, d’un tuple ou d’une chaîne de caractères.
+La syntaxe est la suivante: [start:stop:step] où - start est l’indice de départ, - stop est l’indice
+de fin (non inclus) - step est le pas.</p>
+<pre><code>numbers = [1, 2, 3, 4, 5]
+print(numbers[1:3])
+print(numbers[1:])
+print(numbers[:3])
+print(numbers[::2])
+print(numbers[::-1])
+print(numbers[4:1:-1]) 
+s = &quot;Hello World&quot;
+print(s[0:3]) # Hel
+print(s[-1]) # d
+</code></pre>
+<p>Il est possible d’utiliser des valeurs négatives pour start et stop. Dans ce cas, l’indice est compté
+à partir de la fin de la liste.</p>
+<pre><code>numbers = [1, 2, 3, 4, 5]
+print(numbers[:-3])
+print(numbers[-3:-1])
+print(numbers[-4:])
+print(numbers[-2:])
+</code></pre>
+<p>Il est aussi possible d’utiliser des valeurs négatives pour step. Dans ce cas, la liste est parcourue
+en partant de la fin.</p>
+<pre><code>numbers = [1, 2, 3, 4, 5]
+print(numbers[::-1])
+print(numbers[4:1:-1])
+print(numbers[-1:-4:-1])
+</code></pre>
+<h3 id="tuples">Tuples<a class="headerlink" href="#tuples" title="Permanent link">&para;</a></h3>
+<p>Un tuple est une collection d’objets ordonnés et non modifiables. Les tuples sont déclarés en#utilisant des parenthèses () et les éléments sont séparés par des virgules ,. Un tuple en python est
+polymorphe, c’est-à-dire qu’il peut contenir des éléments de différents types.</p>
+<pre><code>numbers = (1, 2, 3, 4, 5)
+val = numbers[0] # val = 1
+</code></pre>
+<p>Comme un tuple est non modifiable, il n’y a pas de méthode pour ajouter ou supprimer
+des éléments.
+L’instruction numbers[0] = 10 va générer une erreur.</p>
+<h3 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h3>
+<pre><code>int
+i = 12
+
+float
+f = 12.0
+
+complex
+c = 12 + 0j
+
+bool
+b = True
+
+string
+s1 = &quot;Hello World&quot;
+
+list
+l = [1,2,3,4,5]
+
+tuple
+t = (1,2,3,4,5)
+
+set
+s2 = {1,2,3,4,5}
+
+dict
+d = {&quot;a&quot;: 13, &quot;b&quot;: 2, &quot;c&quot; : 3}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../cours_info_C/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Prise de notes en C">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Prise de notes en C
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../cours_mathmt/" class="md-footer__link md-footer__link--next" aria-label="Next: Prise de notes Math MT">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Prise de notes Math MT
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotation", "content.code.copy", "content.tabs.link", "header.autodhide", "announce.dismiss", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

@@ -12,6 +12,8 @@
         <link rel="prev" href="..">
       
       
+        <link rel="next" href="../cours_info_python/">
+      
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
@@ -239,6 +241,40 @@
   
 
       
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cours_info_python/" class="md-tabs__link">
+        
+  
+    
+  
+  Prise de notes en Python
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cours_mathmt/" class="md-tabs__link">
+        
+  
+    
+  
+  Prise de notes Math MT
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -449,14 +485,20 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Formatage pour printf en C">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#flags" class="md-nav__link">
     <span class="md-ellipsis">
       === Flags ===
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -506,6 +548,46 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours_info_python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prise de notes en Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours_mathmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prise de notes Math MT
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -643,14 +725,20 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Formatage pour printf en C">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#flags" class="md-nav__link">
     <span class="md-ellipsis">
       === Flags ===
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -713,13 +801,13 @@
 
   <h1>Prise de notes en C</h1>
 
-<h2 id="bibliotheques-standard-du-c">Bibliothèques Standard du C<a class="headerlink" href="#bibliotheques-standard-du-c" title="Permanent link">&para;</a></h2>
-<h3 id="gestion-des-erreurs-et-assertions">=== Gestion des Erreurs et Assertions ===<a class="headerlink" href="#gestion-des-erreurs-et-assertions" title="Permanent link">&para;</a></h3>
+<h3 id="bibliotheques-standard-du-c">Bibliothèques Standard du C<a class="headerlink" href="#bibliotheques-standard-du-c" title="Permanent link">&para;</a></h3>
+<h4 id="gestion-des-erreurs-et-assertions">=== Gestion des Erreurs et Assertions ===<a class="headerlink" href="#gestion-des-erreurs-et-assertions" title="Permanent link">&para;</a></h4>
 <pre><code>#include &lt;assert.h&gt; --&gt; Gestion des assertions 
 </code></pre>
 <pre><code>#include &lt;errno.h&gt; --&gt; Codes d'erreur standard 
 </code></pre>
-<h3 id="types-et-limites">=== Types et Limites ===<a class="headerlink" href="#types-et-limites" title="Permanent link">&para;</a></h3>
+<h4 id="types-et-limites">=== Types et Limites ===<a class="headerlink" href="#types-et-limites" title="Permanent link">&para;</a></h4>
 <pre><code>#include &lt;complex.h&gt; --&gt; Opérations sur des nombres complexes 
 </code></pre>
 <pre><code>#include &lt;ctype.h&gt; --&gt; Fonctions de test et de mappage de caractères    
@@ -736,7 +824,7 @@
 </code></pre>
 <pre><code>#include &lt;stdint.h&gt; --&gt; Types entiers à largeur fixe  
 </code></pre>
-<h3 id="localisation-et-environnement">=== Localisation et Environnement ===<a class="headerlink" href="#localisation-et-environnement" title="Permanent link">&para;</a></h3>
+<h4 id="localisation-et-environnement">=== Localisation et Environnement ===<a class="headerlink" href="#localisation-et-environnement" title="Permanent link">&para;</a></h4>
 <pre><code>#include &lt;locale.h&gt; --&gt; Localisation 
 </code></pre>
 <pre><code>#include &lt;fenv.h&gt; --&gt; Gestion de l'environnement flottant   
@@ -745,25 +833,25 @@
 </code></pre>
 <pre><code>#include &lt;signal.h&gt; --&gt; Gestion des signaux 
 </code></pre>
-<h3 id="entreessorties-et-manipulation-de-chaines">=== Entrées/Sorties et Manipulation  de Chaînes ===<a class="headerlink" href="#entreessorties-et-manipulation-de-chaines" title="Permanent link">&para;</a></h3>
+<h4 id="entreessorties-et-manipulation-de-chaines">=== Entrées/Sorties et Manipulation  de Chaînes ===<a class="headerlink" href="#entreessorties-et-manipulation-de-chaines" title="Permanent link">&para;</a></h4>
 <pre><code>#include &lt;stdio.h&gt; --&gt; Entrée/Sortie  
 </code></pre>
 <pre><code>#include &lt;stdlib.h&gt; --&gt; Utilitaires généraux
 </code></pre>
 <pre><code>#include &lt;string.h&gt; --&gt; Manipulation de chaînes 
 </code></pre>
-<h3 id="fonctions-mathematiques">=== Fonctions Mathématiques ===<a class="headerlink" href="#fonctions-mathematiques" title="Permanent link">&para;</a></h3>
+<h4 id="fonctions-mathematiques">=== Fonctions Mathématiques ===<a class="headerlink" href="#fonctions-mathematiques" title="Permanent link">&para;</a></h4>
 <pre><code>#include &lt;math.h&gt; --&gt; Fonctions mathématiques   
 </code></pre>
 <pre><code>#include &lt;tgmath.h&gt; --&gt; Fonctions mathématiques génériques
 </code></pre>
-<h3 id="gestion-du-temps">=== Gestion du Temps ===<a class="headerlink" href="#gestion-du-temps" title="Permanent link">&para;</a></h3>
+<h4 id="gestion-du-temps">=== Gestion du Temps ===<a class="headerlink" href="#gestion-du-temps" title="Permanent link">&para;</a></h4>
 <pre><code>#include &lt;time.h&gt; --&gt; Fonctions liées au temps
 </code></pre>
-<h3 id="arguments-variables">=== Arguments Variables ===<a class="headerlink" href="#arguments-variables" title="Permanent link">&para;</a></h3>
+<h4 id="arguments-variables">=== Arguments Variables ===<a class="headerlink" href="#arguments-variables" title="Permanent link">&para;</a></h4>
 <pre><code>#include &lt;stdarg.h&gt; --&gt; Gestion des arguments à nombre variable
 </code></pre>
-<h2 id="types-de-variables-du-c">Types de variables du C<a class="headerlink" href="#types-de-variables-du-c" title="Permanent link">&para;</a></h2>
+<h3 id="types-de-variables-du-c">Types de variables du C<a class="headerlink" href="#types-de-variables-du-c" title="Permanent link">&para;</a></h3>
 <pre><code>char a;  --&gt; Entier sur 8 bits utilisé pour des caractères.
 
 short b; --&gt; short int: Entier en général sur 16 bits.
@@ -778,7 +866,7 @@ long long f;
 
 long long int g; --&gt; Entier sur 64 bits.
 </code></pre>
-<h3 id="types-a-virgule-flottante">=== Types à Virgule Flottante ===<a class="headerlink" href="#types-a-virgule-flottante" title="Permanent link">&para;</a></h3>
+<h4 id="types-a-virgule-flottante">=== Types à Virgule Flottante ===<a class="headerlink" href="#types-a-virgule-flottante" title="Permanent link">&para;</a></h4>
 <pre><code>float h; --&gt; Approximation de réels, sur 32 bits
             (1 bit de signe, 8 bits pour l'exposant et 23 bits pour la fraction).
 
@@ -788,7 +876,7 @@ double i; --&gt; Approximation de réels sur 64 bits (1 bit de signe, 11 bits
 long double j; --&gt; Approximation de réels sur min. 80 bits, mais souvent
                    128 bits (1 bit de signe, 15 bits pour l'exposant et 112 bits pour la fraction).
 </code></pre>
-<h2 id="formatage-pour-printf-en-c">Formatage pour printf en C<a class="headerlink" href="#formatage-pour-printf-en-c" title="Permanent link">&para;</a></h2>
+<h3 id="formatage-pour-printf-en-c">Formatage pour printf en C<a class="headerlink" href="#formatage-pour-printf-en-c" title="Permanent link">&para;</a></h3>
 <pre><code>  * %d, %i      : int en base 10  
   * %c          : caractère donné par son code de type int  
   * %f          : double, par défaut 6 chiffres significatifs  
@@ -800,7 +888,7 @@ long double j; --&gt; Approximation de réels sur min. 80 bits, mais souvent
   * %p          : adresse  
   * %%          : le caractère % lui-même  
 </code></pre>
-<h2 id="flags">=== Flags ===<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h2>
+<h4 id="flags">=== Flags ===<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h4>
 <pre><code>- (flag)    : alignement à gauche
 + (flag)    : nombres imprimés avec le signe (sinon seul le signe négatif est imprimé)
 0 (flag)    : ajoute des zéros devant
@@ -817,7 +905,7 @@ Precision:
 Length:
 l           : pour un entier long (ou L pour un long double), h pour un entier court
 </code></pre>
-<h2 id="fonctions-de-manipulation-de-fichiers-en-c">Fonctions de Manipulation de Fichiers en C<a class="headerlink" href="#fonctions-de-manipulation-de-fichiers-en-c" title="Permanent link">&para;</a></h2>
+<h3 id="fonctions-de-manipulation-de-fichiers-en-c">Fonctions de Manipulation de Fichiers en C<a class="headerlink" href="#fonctions-de-manipulation-de-fichiers-en-c" title="Permanent link">&para;</a></h3>
 <pre><code>int fputc(int c, FILE *fp); --&gt; Écrit un caractère 'c' dans le fichier pointé par 'fp'.
                                  Retourne le caractère écrit en cas de succès, sinon EOF.
 </code></pre>
@@ -846,7 +934,7 @@ l           : pour un entier long (ou L pour un long double), h pour un entier c
 </code></pre>
 <pre><code>void rewind(FILE *fp); --&gt;Repositionne le curseur de fichier 'fp' au début du fichier.
 </code></pre>
-<h3 id="fonctions-de-gestion-avancee-des-fichiers-en-c">=== Fonctions de Gestion Avancée des Fichiers en C ===<a class="headerlink" href="#fonctions-de-gestion-avancee-des-fichiers-en-c" title="Permanent link">&para;</a></h3>
+<h4 id="fonctions-de-gestion-avancee-des-fichiers-en-c">=== Fonctions de Gestion Avancée des Fichiers en C ===<a class="headerlink" href="#fonctions-de-gestion-avancee-des-fichiers-en-c" title="Permanent link">&para;</a></h4>
 <pre><code>int fflush(FILE *fp); --&gt; Vide le buffer de sortie du fichier pointé par 'fp' et
                             écrit toutes les données en attente.
                             Retourne 0 en cas de succès, EOF en cas d'erreur.
@@ -865,7 +953,7 @@ l           : pour un entier long (ou L pour un long double), h pour un entier c
                            automatiquement à la fin de l'exécution du programme.
                            Retourne un pointeur vers ce fichier en cas de succès, ou NULL en cas d'échec.
 </code></pre>
-<h3 id="fonctions-de-verification-et-de-reinitialisation-de-letat-des-fichiers-en-c">=== Fonctions de Vérification et de Réinitialisation de l'État des Fichiers en C ===<a class="headerlink" href="#fonctions-de-verification-et-de-reinitialisation-de-letat-des-fichiers-en-c" title="Permanent link">&para;</a></h3>
+<h4 id="fonctions-de-verification-et-de-reinitialisation-de-letat-des-fichiers-en-c">=== Fonctions de Vérification et de Réinitialisation de l'État des Fichiers en C ===<a class="headerlink" href="#fonctions-de-verification-et-de-reinitialisation-de-letat-des-fichiers-en-c" title="Permanent link">&para;</a></h4>
 <pre><code>void clearerr(FILE *fp); --&gt; Efface les indicateurs d'erreur et de fin de fichier associés au
                                fichier pointé par 'fp'.
 </code></pre>
@@ -875,7 +963,7 @@ l           : pour un entier long (ou L pour un long double), h pour un entier c
 <pre><code>int ferror(FILE *fp); --&gt; Teste l'indicateur d'erreur pour le fichier pointé par 'fp' et renvoie un
                             résultat non nul si celui-ci est positionné, 0 sinon.
 </code></pre>
-<h2 id="structures-et-creation-de-types-en-c">Structures et Création de Types en C<a class="headerlink" href="#structures-et-creation-de-types-en-c" title="Permanent link">&para;</a></h2>
+<h3 id="structures-et-creation-de-types-en-c">Structures et Création de Types en C<a class="headerlink" href="#structures-et-creation-de-types-en-c" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Définition d'une structure
@@ -971,6 +1059,22 @@ l           : pour un entier long (ou L pour un long double), h pour un entier c
           </a>
         
         
+          
+          <a href="../cours_info_python/" class="md-footer__link md-footer__link--next" aria-label="Next: Prise de notes en Python">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Prise de notes en Python
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
       </nav>
     
   
@@ -1000,6 +1104,8 @@ l           : pour un entier long (ou L pour un long double), h pour un entier c
     
     
       <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
     
   </body>
